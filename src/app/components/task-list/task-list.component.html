@@ -8,6 +8,7 @@
           <th scope="col">Title</th>
           <th scope="col">Description</th>
           <th scope="col">Status</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -16,6 +17,7 @@
           <td>{{ task.title }}</td>
           <td>{{ task.description }}</td>
           <td>{{ task.status ? "Done" : "Pending" }}</td>
+          <td><button type="button" class="btn btn-primary" [routerLink]="['/tasks', task.id]">Edit</button></td>
         </tr>
       </tbody>
     </table>
